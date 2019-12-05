@@ -1,0 +1,28 @@
+branches:
+    only:
+        - master
+
+language: go
+
+go:
+    - "1.11"
+    - "1.12"
+    - "1.13"
+    - master
+
+gobuild_args: -mod=readonly
+
+env:
+    global:
+        - GO111MODULE: on
+
+os:
+    - linux
+    - osx
+
+dist:
+    - bionic
+
+arch:
+    - amd64
+    - arm64
